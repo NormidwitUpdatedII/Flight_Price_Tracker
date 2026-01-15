@@ -1,11 +1,13 @@
 services:
-  - type: background_worker
+  - type: worker
     name: flight-price-monitor
     runtime: python
     plan: free
     buildCommand: pip install requests
-    startCommand: python flight_monitor_simple.py
+    startCommand: python flight_monitor_serpapi.py
     envVars:
+      - key: SERPAPI_KEY
+        sync: false
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: TELEGRAM_CHAT_ID
@@ -13,7 +15,7 @@ services:
       - key: PRICE_THRESHOLD
         value: "2000"
       - key: CHECK_INTERVAL
-        value: "60"
+        value: "480"
       - key: ORIGIN
         value: "DIY"
       - key: DESTINATION
