@@ -1,0 +1,38 @@
+{
+    "_comment": "Example configuration - Copy this to config.json and fill in your details",
+    "flights": [
+        {
+            "date": "04.02.2026",
+            "url": "https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/?cId=a7116f55-4ba3-4d67-93d5-5c7a024397a1"
+        },
+        {
+            "date": "05.02.2026",
+            "url": "https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/?cId=a7116f55-4ba3-4d67-93d5-5c7a024397a1"
+        },
+        {
+            "date": "06.02.2026",
+            "url": "https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/?cId=a7116f55-4ba3-4d67-93d5-5c7a024397a1"
+        },
+        {
+            "date": "07.02.2026",
+            "url": "https://www.turkishairlines.com/tr-tr/ucak-bileti/rezervasyon/ic-hat-musaitlik/?cId=a7116f55-4ba3-4d67-93d5-5c7a024397a1"
+        }
+    ],
+    "price_threshold": 2000,
+    "_threshold_note": "You'll get alerts when price is AT OR BELOW this amount (in TL)",
+    "check_interval_minutes": 60,
+    "_interval_note": "How often to check prices (minimum 30 minutes recommended)",
+    "email": {
+        "enabled": false,
+        "_setup_instructions": "See README.md for Gmail App Password setup",
+        "sender_email": "your-email@gmail.com",
+        "sender_password": "your-16-character-app-password",
+        "recipient_email": "your-email@gmail.com"
+    },
+    "telegram": {
+        "enabled": false,
+        "_setup_instructions": "Message @BotFather on Telegram to create a bot, then @userinfobot to get your chat ID",
+        "bot_token": "123456789:ABCdefGHIjklMNOpqrsTUVwxyz",
+        "chat_id": "123456789"
+    }
+}
