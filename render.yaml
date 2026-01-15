@@ -1,9 +1,10 @@
 services:
-  - type: worker
+  - type: background_worker
     name: flight-price-monitor
     runtime: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python flight_monitor_serpapi.py
+    plan: free
+    buildCommand: pip install requests
+    startCommand: python flight_monitor_simple.py
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
